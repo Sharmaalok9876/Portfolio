@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alok Kumar's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #283048, #859398);
+            color: #f5f5f5;
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 50, 0.8);
+            color: white;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 40px;
+        }
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .firstSection .leftSection {
+            font-size: 2em;
+            font-weight: 700;
+            color: #f5f5f5;
+        }
+        .firstSection .leftSection .purple {
+            color: blueviolet;
+        }
+        .firstSection .rightSection img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        h1 {
+            color: #fff;
+            font-size: 2.5em;
+        }
+        .project-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .project-card {
+            perspective: 1000px;
+            margin: 20px;
+        }
+        .card {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            background: linear-gradient(145deg, #3a3a52, #8e8e9a);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .card-front {
+            background: linear-gradient(145deg, #647dee, #7c3aed);
+            color: white;
+        }
+        .card-back {
+            background: linear-gradient(145deg, #2b5876, #4e4376);
+            transform: rotateY(180deg);
+        }
+        .card-back ul {
+            padding: 20px;
+            text-align: left;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .skill-card {
+            margin: 20px;
+            flex: 1 1 30%;
+        }
+        .contactSection a {
+            color: #f5f5f5;
+        }
+        .contactSection a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Alok Kumar</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Alok</span>
+                <span> and I am a passionate Web Developer</span>
+                <span id="element"></span> <!-- This is where Typed.js is applied -->
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="Background image illustrating web development" />
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="about">
+            <h1>About Me</h1>
+            <p>
+                I am a web developer and a dedicated student with a strong interest in technology and design.
+                Currently pursuing my degree, I am committed to expanding my skills in HTML, CSS, JavaScript, and various frameworks.
+                I enjoy collaborating with peers on projects and contributing to open-source initiatives.
+            </p>
+        </section>
+        <section class="educationSection" id="education">
+            <h1>Education</h1>
+            <ul>
+                <li>B.Tech in Computer Science and Engineering - Vignan’s Foundation for Science, Technology & Research (2021-2025) - Guntur, Andhra Pradesh - CGPA: 7.08</li>
+                <li>Intermediate in PCM - Jehanabad College, Jehanabad (2018-2020) - Jehanabad, Bihar - Percentage: 72.6%</li>
+            </ul>
+        </section>
+        <section class="projectsSection" id="projects">
+            <h1>Projects</h1>
+            <div class="project-container">
+                <div class="project-card">
+                    <div class="card">
+                        <div class="card-front">
+                            <h3>Bank Management System</h3>
+                            <p>Aug 2024 - Dec 2024</p>
+                        </div>
+                        <div class="card-back">
+                            <ul>
+                                <li>Developed using Java.</li>
+                                <li>Features: Account management, withdrawals, deposits.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card">
+                        <div class="card-front">
+                            <h3>University Management System</h3>
+                            <p>Jun 2023 - Sep 2023</p>
+                        </div>
+                        <div class="card-back">
+                            <ul>
+                                <li>Streamlined administrative tasks.</li>
+                                <li>Features: Enrollment, course management.</li>
+                                <li><a href="https://github.com/Sharmaalok9876/university_management_system" target="_blank" style="color: white;">View on GitHub</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="skillsSection" id="skills">
+            <h1>Skills</h1>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <div class="card">
+                        <div class="card-front">
+                            <h3>Java</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Proficient in Java programming language.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="card">
+                        <div class="card-front">
+                            <h3>Web Development</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Experienced in HTML, CSS, JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="card">
+                        <div class="card-front">
+                            <h3>SQL</h3>
+                        </div>
+                        <div class="card-back">
+                            <p>Proficient in SQL database management.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="achievementsSection" id="achievements">
+            <h1>Achievements</h1>
+            <ul>
+                <li>Achieved 2-star on Codechef</li>
+                <li>4-star on HackerRank</li>
+                <li>Awarded 50% scholarship in Vignan University for the full course duration</li>
+                <li>Solved more than 1000 questions on GeeksForGeeks</li>
+            </ul>
+        </section>
+    </main>
+    
+    
